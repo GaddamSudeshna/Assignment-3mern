@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button onclick="uc('1');">1</button>
+        <button onclick="uc('2');">2</button>
+        <button onclick="uc('3');">3</button>
+        <button onclick="uc(' + ');">+</button>
+    </p>
+    <p>
+        <button onclick="uc('4');">4</button>
+        <button onclick="uc('5');">5</button>
+        <button onclick="uc('6');">6</button>
+        <button onclick="uc(' - ');">-</button>
+    </p>
+    <p>
+        <button onclick="uc('7');">7</button>
+        <button onclick="uc('8');">8</button>
+        <button onclick="uc('9');">9</button>
+        <button onclick="uc(' * ');">*</button>
+    </p>
+    <p>
+        <button onclick="uc('0');">0</button>
+        <button onclick="uc('.');">.</button>
+        <button onclick="c=eval(c); console.log(c);">=</button>
+        <button onclick="uc(' / ');">/</button>
+    </p>
+    <p>
+        <button onclick="c='';console.log(c);">clear</button>
+    </p>
+    <script>
+        let c='';
+        function uc(value){
+            c+=value;
+            console.log(c);
+        }
+    </script>
+</body>
+</html>

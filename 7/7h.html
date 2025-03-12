@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function cl(l,f,to)
+     {
+        if(f=='km' && to=='miles')
+     {
+        return `${l/1.6}${to}`;
+     }
+     else if(f=='km' && to=='ft')
+     {
+        
+        return `${l*3281}${to}`;
+     }
+     else if(f=='miles' && to=='km')
+     {
+        
+        return `${l*1.6}${to}`;
+     }
+     else if(f=='miles' && to=='ft')
+     {
+        
+        return `${l*5280}${to}`;
+     }
+     else if(f=='ft' && to=='km')
+     {
+        
+        return `${l/3281}${to}`;
+     }
+     else if(f=='ft' && to=='miles')
+     {
+        
+        return `${l/5280}${to}`;
+     }
+     else if(f==to)
+     {
+        return `${l} ${to}`;
+     }
+     }
+     console.log(cl(50,'miles','km'));
+     console.log(cl(32,'km','miles'));
+     console.log(cl(50,'km','km'));
+     console.log(cl(5,'miles','km'));
+     console.log(cl(5,'miles','ft'));
+     console.log(cl(5,'km','ft'));
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ctof(c)
+     {
+        return (c*9/5)+32;
+     }
+     function ctoc(f)
+     {
+        return (f-32)*5/9;
+     }
+     function ct(d,u)
+     {
+        if(u=='c')
+     {
+        const r=ctof(d);
+        return `${r}F`;
+     }
+     else if(u=='F')
+     {
+        const r=ctoc(d);
+        return `${r}C`;
+     }
+     }
+     console.log(ct(25,'c'));
+     console.log(ct(86,'F'));
+    </script>
+</body>
+</html>
