@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delayed Object Processor</title>
+</head>
+<body>
+    <script>
+
+        const items = [
+            { 
+                name: "Alpha", 
+                process: function() { 
+                    console.log(`Processing: ${this.name}`); 
+                } 
+            },
+            { 
+                name: "Beta", 
+                process: function() { 
+                    console.log(`Task for ${this.name} done.`); 
+                } 
+            }
+        ];
+
+        function processObjectsDelayed(arr, delay) {
+            arr.forEach((item) => {
+                setTimeout(() => {
+                    item.process(); 
+                }, delay);
+            });
+        }
+
+      
+        processObjectsDelayed(items, 2000);
+    </script>
+</body>
+</html>
