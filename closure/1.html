@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <button onclick="alert(counterA())">click A</button>
+        <button onclick="alert(counterB())">click B</button>
+    <script>
+         
+        function createCounter() {
+    let count = 0;
+    function incrementCounter() {
+    count++;
+    return count;
+    }
+    return incrementCounter;
+    }
+    const counterA = createCounter();
+  //  console.log(counterA()); // Expected: 1, Actual: 1
+   // console.log(counterA()); // Expected: 2, Actual: 2
+    const counterB = createCounter();
+   // console.log(counterB()); // Expected: 1 (independent counter), Actual: 1                                                                      
+    </script>
+</body>
+</html>

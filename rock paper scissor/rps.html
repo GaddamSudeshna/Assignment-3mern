@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Rock Paper Scissors</h1>
+      
+      <section class="moves" aria-label="Choose your move">
+        <button type="button" class="move-button js-move" data-move="rock" aria-label="Rock">
+          <img src="images/rock-emoji.png" alt="👊 Rock" class="move-icon" />
+        </button>
+
+        <button type="button" class="move-button js-move" data-move="paper" aria-label="Paper">
+          <img src="images/paper-emoji.png" alt="✋ Paper" class="move-icon" />
+        </button>
+
+        <button type="button" class="move-button js-move" data-move="scissors" aria-label="Scissors">
+          <img src="images/scissors-emoji.png" alt="✌️ Scissors" class="move-icon" />
+        </button>
+      </section>
+
+      <section class="results" aria-live="polite">
+        <p class="js-result result"></p>
+        <p class="js-moves moves-history"></p>
+        <p class="js-score score"></p>
+      </section>
+
+      <section class="controls">
+        <button type="button" class="reset-score-button js-reset-score-button">
+          Reset Score
+        </button>
+
+        <button type="button" class="auto-play-button js-auto-play-button">
+          Auto Play
+        </button>
+      </section>
+    </main>
+
+    <script src="rps.js"></script>
+  </body>
+</html>
